@@ -1,0 +1,8 @@
+<!--order/order/order.wxml-->
+<view >{{mz}}</view>
+<text ></text>
+<button bindtap='anniu'>ccc</button>
+<button open-type='getUserInfo' bindgetuserinfo='handlegetUser'>登录授权</button> 
+<open-data type='userCity'></open-data>
+<open-data type='userNickName'></open-data>
+<!-- <open-data type='userAvatarUrl'></open-data> -->

@@ -1,0 +1,12 @@
+<!--home/home/home.wxml-->
+<text class='hello'>Hello!小程序!!</text>
+
+<view wx:for="{{ceshi}}">名字:{{item.name}}
+描述:{{item.ms}}
+</view>
+<view>计数:{{count}}
+</view>
+<button bindtap='dianji'>+</button>
+<view></view>
+
+

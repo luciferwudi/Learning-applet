@@ -1,10 +1,20 @@
-//app.js
+//app.js  注册实例
 App({
-  onLaunch: function () {
+  onLoad: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
+    let that = this
+    console.log(options)
+    //中间省略其他代码
+    if (options.scene == 1043) {
+      wx.showToast({
+        title: options.scene.toString(),
+      })
+      //这里写入相关业务代码
+    }
 
     // 登录
     wx.login({
@@ -15,7 +25,7 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: res => {
-        if (res.authSetting['scope.userInfo']) {
+        if (res.authSetting['scope.userInfo']) { 
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -34,6 +44,6 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    test:180
   }
 })
